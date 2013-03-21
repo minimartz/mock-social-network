@@ -1,1 +1,1 @@
-    	<a href="home.php">Homepage<br /><a href="list_pm.php">Your messages(<?php echo $nb_new_pm; ?>)</a> - <a href="profile.php?username=<?php echo $_SESSION['username']; ?>"><?php echo htmlentities($_SESSION['username'], ENT_QUOTES, 'UTF-8'); ?></a> <br /> (<a href="logout.php">Logout</a>)
+<a href="home.php">Homepage<br /><a href="profile.php?username=<?php echo $_SESSION['username']; ?>">My Profile</a> <br /> <a href="logout.php">Logout</a>

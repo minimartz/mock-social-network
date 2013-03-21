@@ -2,8 +2,24 @@
 /* CSS Document */
 /* internalstyles.css */
 
-#header
+body
 {
+}
+
+#bar
+{
+width:120px;
+height:70px;
+font-family: courier new, serif;
 text-align: center;
-font-family: courier new;
+border-top:2px solid #0CC;
+border-bottom:2px solid #0CC;
+border-left: 2px solid #0CC;
+border-right: 2px solid #0CC;
+}
+
+#overheader
+{
+width:960px;
+height:140px;
 }

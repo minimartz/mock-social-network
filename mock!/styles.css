@@ -1,0 +1,151 @@
+@charset "UTF-8"
+/* CSS Document */
+/* styles.css, for mock! */
+
+body
+{
+color:#0CC;
+margin:0px;
+padding:0px;
+}
+
+#header
+{
+width:960px;
+height:100px;
+margin-left: auto;
+margin-right: auto;
+position: relative;
+}
+
+#flip
+{
+border: 2px solid #00FF00;
+}
+
+#panel,#flip
+{
+padding:0px;
+text-align:center;
+background-color:#FFF;
+}
+
+#panel
+{
+padding:40px;
+display:none;
+text-align: left;
+border-left:2px solid #00FF00;
+border-right:2px solid #00FF00;
+border-bottom:2px solid #00FF00;
+}
+
+#contentlogin
+{
+text-align: center;
+font-family: Palatino Linotype, sans-serif;
+width:956px;
+height:100px;
+margin-top:auto;
+padding-top:10px;
+border-bottom:2px solid #00FF00;
+border-left:2px solid #00FF00;
+border-right:2px solid #00FF00;
+padding-bottom:10px;
+background-color:#FFF;
+}
+
+#wrapper
+{
+padding-top:50px;
+background-color:#0CC;
+height:100%;
+width:100%;
+margin:0px;
+font-family: Palatino Linotype, sans-serif;
+}
+
+#contenthome
+{
+height:400px;
+width:960px;
+background-color:#FFF;
+padding:20px;
+margin-left:auto;
+margin-right:auto;
+text-align:center;
+border:2px solid #00FF00;
+}
+
+#flip2
+{
+width:1000px;
+height:80px;
+border-right:2px solid #00FF00;
+border-top:2px solid #00FF00;
+border-left:2px solid #00FF00;
+background-color:#FFF;
+margin-left:auto;
+margin-right:auto;
+text-align: center;
+}
+
+#panel2,#flip2
+{
+text-align:center;
+background-color:#FFF;
+}
+
+#panel2
+{
+display:none;
+border-left:2px solid #00FF00;
+border-right:2px solid #00FF00;
+border-top:2px solid #00FF00;
+width:1000px;
+margin-left:auto;
+margin-right:auto;
+}
+
+#flip3
+{
+width:960px;
+height:80px;
+border-right:2px solid #00FF00;
+border-top:2px solid #00FF00;
+border-left:2px solid #00FF00;
+background-color:#FFF;
+margin-left:auto;
+margin-right:auto;
+text-align: center;
+}
+
+#panel3,#flip3
+{
+text-align:center;
+background-color:#FFF;
+}
+
+#panel3
+{
+display:none;
+border-left:2px solid #00FF00;
+border-right:2px solid #00FF00;
+border-top:2px solid #00FF00;
+width:960px;
+margin-left:auto;
+margin-right:auto;
+padding-top:10px;
+padding-bottom:10px;
+}
+
+#forumcontent
+{
+width:960px;
+height:400px;
+margin-left:auto;
+margin-right:auto;
+border:2px solid #00FF00;
+background-color:#FFF;
+text-align:center;
+}

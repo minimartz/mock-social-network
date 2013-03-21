@@ -5,9 +5,11 @@ include "db_connect.php";
 
 if($_SESSION['id'])
 {
-include('headerthing.php');
-
-if($_POST['submit'])
+?>
+<div id="head">
+<?php include('headerthing.php');
+echo "</div>";
+if(!$_POST['submit'])
 {
 ?>
 
@@ -15,8 +17,8 @@ if($_POST['submit'])
 <head><link rel="stylesheet" href="internalstyles.css" type="text/css" media="screen" /></head>
 
 <div class="divider">
-<strong>Register</strong><br/><br/>
-<form method="post" action="register.php">
+<strong>Post on the Forum</strong><br/><br/>
+<form method="post" action="forum_write.php">
 
 <div class="formElm">
 <label for="subject">Topic/Subject</label>
@@ -25,7 +27,7 @@ if($_POST['submit'])
 
 <div class="formElm">
 <label for="content">Content</label>
-<textarea id="content" cols="30" rows="5" name="content">
+<textarea id="content" cols="30" rows="5" name="content"></textarea>
 </div>
 
 <div class="formElm">
@@ -33,6 +35,7 @@ if($_POST['submit'])
 <input id="links" type="text" name="links">
 <form method="post" action="view_forum.php">
 </div>
+
 <input type="submit" name="submit" value="Submit">
 </html>
 
@@ -43,11 +46,11 @@ else
 $subject = protect($_POST['subject']);
 $content = protect($_POST['content']);
 $links = protect($_POST['links']);
-$errors = array();
+$errorsd = array();
 
 if(!$subject || !$content)
 {
-$errors[] = "You didn't fill out the required fields (forum needs a name and some content)";
+$errorsd[] = "You didn't fill out the required fields (post needs both a name and some content, jsyk)";
 }
 
 $sql = "SELECT * FROM `FORUM` WHERE `subject`='{$subject}'";
@@ -55,15 +58,15 @@ $query = mysql_query($sql) or die(mysql_error());
  
 if(mysql_num_rows($query) > 0) 
 {
-  $errors[] = "Subject already in use. Change the name xD";
+  $errorsd[] = "Subject already in use. Change the name xD";
 }
-if(count($errors) > 0)
+if(count($errorsd) > 0)
 {
   echo "<br /><br />The following errors occured with the forum creation:<br />";
   echo "<font color=\"red\">";
-  foreach($errors AS $error)
+  foreach($errorsd AS $errord)
   {
-    echo "<p>" . $error . "\n";
+    echo "<p>" . $errord . "\n";
   }
   echo "</font>";
   echo "<a href=\"javascript:history.go(-1)\">Try again</a>";
@@ -77,7 +80,7 @@ else
   VALUES ('$subject','$content','$links');";
  
  $query = mysql_query($sql) or die(mysql_error());
- echo "Thanks! View the forum <a href='view_forum.php'>here</a>!";
+ echo "<br /><br />Thanks! View the forum <a href='view_forum.php'>here</a>!";
 }
 }
 }

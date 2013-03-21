@@ -9,30 +9,47 @@ if(!$_POST['submit'])
 ?>
 
 <html>
-<head><link rel="stylesheet" href="style.css">
+<head><link rel="stylesheet" type="text/css" href="styles.css" media="screen" />
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <title>Mock!</title>
+<script> 
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideToggle("slow");
+  });
+});
+</script>
 </head>
-
-<div class="divider">
-
-<strong>Login</strong>
+<body>
+<div id="wrapper">
+<div id="header">
+<div id="flip">
+<h2>Login</h2>
 <form method="post" action="index.php">
+</div>
 
-<div class="formElm">
+<div id="panel">
+<h2>Login Panel</h2>
 <label for="username">Username</label>
 <input id="username" type="text" name="username" maxlength="16">
-</div>
 
-<div class="formElm">
 <label for="password">Password</label>
 <input type="password" name="password" maxlength="16">
-</div>
 
+<br />
 <input type="submit" name="submit" value="Login">
 </form>
+<br /><br />
 <a href="register.php">Register Here</a>
-<br /><br />The Mock Terms of Use can be found <a href="termsofuse.html">here</a>
+<br /><br />The Mock Terms of Use can be found <a href="termsofuse.html" target="blank">here</a>
 </div>
+<div id="contentlogin">
+<h2>Welcome to the "mock!" Social Network and Forum!</h2>
+<h3>You Can View The Forum <a href="view_forum.php">Here</a></h3><br />
+</div>
+</div>
+</div>
+</body>
 </html>
 
 <?php
